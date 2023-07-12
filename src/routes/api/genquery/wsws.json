@@ -1,0 +1,200 @@
+{
+  "id": "RgGFBxqUBJB5UMWkWkpMWw_0000",
+  "full_name": "stefania lettini",
+  "first_name": "stefania",
+  "middle_initial": null,
+  "middle_name": null,
+  "last_name": "lettini",
+  "gender": "female",
+  "birth_year": null,
+  "birth_date": null,
+  "linkedin_url": "linkedin.com/in/stefania-lettini-27b947109",
+  "linkedin_username": "stefania-lettini-27b947109",
+  "linkedin_id": null,
+  "facebook_url": null,
+  "facebook_username": null,
+  "facebook_id": null,
+  "twitter_url": null,
+  "twitter_username": null,
+  "github_url": null,
+  "github_username": null,
+  "work_email": null,
+  "mobile_phone": null,
+  "industry": "food production",
+  "job_title": "owner",
+  "job_title_role": null,
+  "job_title_sub_role": null,
+  "job_title_levels": ["owner"],
+  "job_company_id": null,
+  "job_company_name": "lettinis www.lettinis.de",
+  "job_company_website": null,
+  "job_company_size": null,
+  "job_company_founded": null,
+  "job_company_industry": null,
+  "job_company_linkedin_url": null,
+  "job_company_linkedin_id": null,
+  "job_company_facebook_url": null,
+  "job_company_twitter_url": null,
+  "job_company_location_name": null,
+  "job_company_location_locality": null,
+  "job_company_location_metro": null,
+  "job_company_location_region": null,
+  "job_company_location_geo": null,
+  "job_company_location_street_address": null,
+  "job_company_location_address_line_2": null,
+  "job_company_location_postal_code": null,
+  "job_company_location_country": null,
+  "job_company_location_continent": null,
+  "job_last_updated": "2020-09-01",
+  "job_start_date": "2005-01",
+  "job_summary": "Import & Distribution in italian, fine Food and selected Wine under Lettinis",
+  "location_name": "cologne, nordrhein-westfalen, germany",
+  "location_locality": "cologne",
+  "location_metro": null,
+  "location_region": "nordrhein-westfalen",
+  "location_country": "germany",
+  "location_continent": "europe",
+  "location_street_address": null,
+  "location_address_line_2": null,
+  "location_postal_code": null,
+  "location_geo": "50.93,6.95",
+  "location_last_updated": "2018-12-01",
+  "linkedin_connections": 346,
+  "inferred_salary": null,
+  "inferred_years_experience": 15,
+  "summary": "Italian Food & Wine Import & Distribution // www.Lettinis.de Food & Travel Photography // www.stefania-Lettini.com",
+  "phone_numbers": [],
+  "emails": [],
+  "interests": [],
+  "skills": [
+    "kommerzielle fotografie",
+    "fotografie",
+    "import/export",
+    "food fotografie",
+    "lebensmittelindustrie",
+    "weinverkostung",
+    "wein",
+    "lebensmittel",
+    "marketing"
+  ],
+  "location_names": ["cologne, nordrhein-westfalen, germany"],
+  "regions": ["nordrhein-westfalen, germany"],
+  "countries": ["germany"],
+  "street_addresses": [],
+  "experience": [
+    {
+      "company": {
+        "name": "www.stefania-lettini.com",
+        "size": null,
+        "id": null,
+        "founded": null,
+        "industry": null,
+        "location": null,
+        "linkedin_url": null,
+        "linkedin_id": null,
+        "facebook_url": null,
+        "twitter_url": null,
+        "website": null
+      },
+      "location_names": [],
+      "end_date": null,
+      "start_date": "2012-01",
+      "title": {
+        "name": "food and travel photography",
+        "role": null,
+        "sub_role": null,
+        "levels": []
+      },
+      "is_primary": false,
+      "summary": "Reportage Photography of food, producers and culinary story telling // Freelance journalist // Specialized on ITALY"
+    },
+    {
+      "company": {
+        "name": "lettinis www.lettinis.de",
+        "size": null,
+        "id": null,
+        "founded": null,
+        "industry": null,
+        "location": null,
+        "linkedin_url": null,
+        "linkedin_id": null,
+        "facebook_url": null,
+        "twitter_url": null,
+        "website": null
+      },
+      "location_names": [],
+      "end_date": null,
+      "start_date": "2005-01",
+      "title": {
+        "name": "owner",
+        "role": null,
+        "sub_role": null,
+        "levels": ["owner"]
+      },
+      "is_primary": true,
+      "summary": "Import & Distribution in italian, fine Food and selected Wine under Lettinis"
+    }
+  ],
+  "education": [
+    {
+      "school": {
+        "name": "university of düsseldorf",
+        "type": "post-secondary institution",
+        "id": "eeeffgreHVoBeXlOheWa2g_0",
+        "location": {
+          "name": "dusseldorf, nordrhein-westfalen, germany",
+          "locality": "dusseldorf",
+          "region": "nordrhein-westfalen",
+          "country": "germany",
+          "continent": "europe"
+        },
+        "linkedin_url": "linkedin.com/school/heinrich-heine-universitat-dusseldorf",
+        "facebook_url": null,
+        "twitter_url": null,
+        "linkedin_id": "11843",
+        "website": "hhu.de",
+        "domain": "hhu.de"
+      },
+      "end_date": "2002",
+      "start_date": "1995",
+      "gpa": null,
+      "degrees": [],
+      "majors": [],
+      "minors": [],
+      "summary": "Abschluss Diplom-Kauffrau // Schwerpunkt Marketing"
+    }
+  ],
+  "profiles": [
+    {
+      "network": "linkedin",
+      "id": null,
+      "url": "linkedin.com/in/stefania-lettini-27b947109",
+      "username": "stefania-lettini-27b947109"
+    }
+  ],
+  "certifications": [
+    {
+      "organization": null,
+      "start_date": null,
+      "end_date": null,
+      "name": "düsseldorf business school an der heinrich-heine-universität"
+    },
+    {
+      "organization": "düsseldorf business school an der heinrich-heine-universität",
+      "start_date": "2003-08",
+      "end_date": null,
+      "name": "diplom-kauffrau"
+    }
+  ],
+  "languages": [
+    { "name": "german", "proficiency": null },
+    { "name": "italian", "proficiency": null },
+    { "name": "english", "proficiency": null }
+  ],
+  "version_status": {
+    "status": "unchanged",
+    "contains": [],
+    "previous_version": "12.0",
+    "current_version": "13.0"
+  }
+}

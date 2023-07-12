@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    /* Customize the scrollbar width */
+    width: 5px;
+    background-color: transparent;
+
+    border-radius: 2rem;
+
+}
+
+::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+    border-radius: 2rem;
+background-color: transparent;
+
+}
+
+/* ::-webkit-scrollbar-track-piece{
+    border-radius: 2rem;
+
+    background-color:white;
+   
+} */
+
+::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+    border-radius: 2rem;
+
+
+}
+
+body{
+    overflow: clip;
+}
