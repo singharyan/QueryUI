@@ -5,7 +5,11 @@
     import Loader from './Loader.svelte';
     import { socket } from '$lib/socket';
     import {onMount} from "svelte"
+    import { PUBLIC_PWD } from '$env/static/public'
 
+    // import 'dotenv/config';
+//     const PUBLIC_PWD = process.env.PWD
+console.log(PUBLIC_PWD);
     let msg;
     const handleMessage = (event) => {
       const reader = new FileReader();

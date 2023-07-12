@@ -14,7 +14,7 @@
  
       <div in:fly={{y:150, duration:77}} class="absolute w-[100vw] h-[100vh] inset-0 items-center flex justify-center">
 
-        <div class="inline-block align-bottom bg-white/50 max-h-[90vh] backdrop-blur-md rounded-xl px-4 pt-5 pb-4 text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full sm:p-6 max-h overflow-y-auto overflow-x-hidden pr-5" transition:fade={{duration:100}} use:clickOutside on:click_outside={()=>handleClickOutside()}>
+        <div class="inline-block align-bottom bg-white/50 max-h-[90vh] backdrop-blur-md rounded-xl px-4 pt-5 pb-4 text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl mx-2 w-full sm:p-6 overflow-y-auto overflow-x-hidden pr-5" transition:fade={{duration:100}} use:clickOutside on:click_outside={()=>handleClickOutside()}>
           <slot/>
         </div>
         
