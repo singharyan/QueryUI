@@ -6,18 +6,21 @@
     import { socket } from '$lib/socket';
     import {onMount} from "svelte"
 
-    let msg;
+    let msg, found=0;
     const handleMessage = (event) => {
       const reader = new FileReader();
       reader.addEventListener('loadend', () => {
         const data = JSON.parse(reader.result);
-        console.log(data);
-        var {res} = data
+        console.log("Message", data);
+        var {res, count} = data
         if(res != undefined){
-          console.log(res);
           result = [...result, res];
         }else if(data == "end"){
           msg= "fin";
+        }else if(count != undefined){
+          found = count;
+          percent = Math.round(found * 100/records);
+          console.log(percent);
         }
       });
       reader.readAsText(event.data);
@@ -28,7 +31,6 @@
     });
 
     $:if(msg == "fin"){
-        console.log("hey");
         let id = query_name; // file name
           let db$ = db()
           db$.dataFiles.insert({
@@ -44,12 +46,15 @@
     var search_start = false;
     async function getStream() {
         console.clear();
+        result=[];
         var message={request:{locations, professions, start, condition, records}};
         if (message) {
         // Emit a 'message' event to the server
         socket.send(JSON.stringify(message));
       }
       search_start =true;
+      percent = 0;
+
     }
     var locations, professions, condition, password, auth = false;
 
@@ -71,6 +76,7 @@
       }
     };
     var errormsg = "";
+    var percent;
 </script>
 
 
@@ -114,9 +120,15 @@
 </div>
 <div class="sm:flex sm:ml-14 sm:mr-4 sm:space-x-3 justify-end mt-16">
   {#if search_start}
-  <div class="flex items-center space-x-6 flex-1">
-    <p class="text-sm font-semibold">Searching peoples...</p>
-    <Loader />
+  <div class="flex flex-col items-center space-x flex-1">
+    <p class="text-sm font-semibold w-full">Searching peoples ({found}/{records})...</p>
+    <div class="w-full bg-gray-200 rounded-full">
+      <div
+        class="bg-blue-400 p-px select-none rounded-full text-center text-xs font-medium leading-none text-white"
+        style="width: {percent}%">
+        {percent}%
+      </div>
+    </div>  
   </div>
   {/if}
   <div class="flex space-x-3 mt-3 sm:mt-0">

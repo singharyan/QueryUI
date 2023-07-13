@@ -7,7 +7,7 @@ const PASSWORD = process.env.PSSWRD
 export async function POST({ request }) {
     const { pwd } = await request.json();
     if (pwd == PASSWORD) {
-        return json({ auth: true, pwd: PASSWORD })
+        return json({ auth: true})
     }
-    return json({ auth: false, pwd: PASSWORD })
+    return json({ auth: false})
 }
