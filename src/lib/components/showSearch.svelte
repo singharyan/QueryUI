@@ -2,12 +2,12 @@
     import { InputChip } from '@skeletonlabs/skeleton';
     import {selected} from "$lib/stores.js";
     import { db } from "../../rxdb.js";
-    import Loader from './Loader.svelte';
-    import { socket } from '$lib/socket';
-    import {onMount} from "svelte"
+    import {onMount, onDestroy} from "svelte"
+    import MaxConn from './MaxConn.svelte';
 
     let msg, found=0;
     const handleMessage = (event) => {
+      // if(typeof event.data)
       const reader = new FileReader();
       reader.addEventListener('loadend', () => {
         const data = JSON.parse(reader.result);
@@ -25,10 +25,20 @@
       });
       reader.readAsText(event.data);
     };
-
-    onMount(() => {
+var socket
+    onMount(async() => {
+      if (typeof WebSocket !== 'undefined') {
+        socket = new WebSocket('wss://ws-server-tensax.onrender.com/:5000');
+      } else {
+        console.warn('WebSocket is not supported');
+      }      
+      console.log(socket);
       socket.onmessage = handleMessage;
     });
+
+    onDestroy(()=>{
+      socket.close();
+    })
 
     $:if(msg == "fin"){
         let id = query_name; // file name
@@ -67,16 +77,14 @@
         }
       });
       var temp = await response.json();
-      console.log(temp);
       auth = temp.auth;
-
       if(!auth){
         errormsg="Please enter correct Password.";
         password="";
       }
     };
     var errormsg = "";
-    var percent;
+    var percent=0;
 </script>
 
 
@@ -119,10 +127,10 @@
   </div>
 </div>
 <div class="sm:flex sm:ml-14 sm:mr-4 sm:space-x-3 justify-end mt-16">
-  {#if search_start}
+  {#if !search_start}
   <div class="flex flex-col items-center space-x flex-1">
     <p class="text-sm font-semibold w-full">Searching peoples ({found}/{records})...</p>
-    <div class="w-full bg-gray-200 rounded-full">
+    <div class="w-full bg-gray-200 rounded-full overflow-clip">
       <div
         class="bg-blue-400 p-px select-none rounded-full text-center text-xs font-medium leading-none text-white"
         style="width: {percent}%">

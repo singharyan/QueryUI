@@ -63,7 +63,6 @@
   var sidebarData=[];
 
   async function filterMarkers(allMarkers) {
-    console.log("markers",allMarkers);
     const bounds = map.getBounds();
     const zoom = map.getZoom();
 
@@ -73,7 +72,6 @@
       const isVisible = isWithinBounds && isWithinZoom;
       return isVisible;
     });
-    console.log("visible", visibleMarkers);
 
     // Remove all markers from the map
     map.eachLayer((layer) => {
@@ -94,13 +92,10 @@
       sidebarData.push(temp);
       var m = leaflet.marker(marker.marker._latlng, {icon}).bindPopup(marker.name).addTo(map);
       m.on('click', ()=>{
-        console.log(marker.name);
         markerData = temp;
-        console.log(markerData);
       })
     });
 
-    console.log(sidebarData);
   };
 
   function idToData(id){
