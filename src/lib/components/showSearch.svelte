@@ -179,7 +179,7 @@ var socket
         </div>
       </div>
       <div class="sm:flex sm:ml-14 sm:mr-4 sm:space-x-3 justify-end mt-16">
-        {#if !search_start}
+        {#if search_start}
         <div class="flex flex-col items-center space-x flex-1">
           <p class="text-sm font-semibold w-full">Searching peoples ({found}/{records})...</p>
           <div class="w-full bg-gray-200 rounded-full overflow-clip">

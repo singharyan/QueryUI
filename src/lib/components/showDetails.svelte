@@ -98,7 +98,7 @@ var screenState = "Personal Details";
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>      
 </button>
-<div class="h-[70vh] overflow-clip">
+<div class="h-[65vh] overflow-clip">
 	<div>
 		<div class="sm:hidden">
 		  <label for="tabs" class="sm:sr-only text-md font-bold text-gray-800">Select a tab</label>
