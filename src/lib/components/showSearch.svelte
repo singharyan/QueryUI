@@ -49,7 +49,7 @@ var socket
       console.log(socket);
       socket.onopen = handleConnection;
       socket.onmessage = handleMessage;
-      socket.onclose=(event)=>{console.log("Disconnected."); connected = false;}
+      socket.onclose=(event)=>{console.log("Disconnected."); }
     });
 
     onDestroy(()=>{
@@ -102,7 +102,16 @@ var socket
     var errormsg = "";
     var percent=0;
 </script>
-  {#if maxconn === "Max-conn-reached" && !auth}
+
+  {#if !connected && !auth && maxconn===""}
+  <div class="w-full h-[65vh] ">
+    <div class="w-1/5 h-5 animate-pulse rounded-md bg-slate-600/50"></div>
+    <div class="w-full h-5 mt-2 animate-pulse rounded-md bg-slate-600/50"></div>
+    <div class="w-full h-5 mt-2 animate-pulse rounded-md bg-slate-600/50"></div>
+
+  </div>
+
+  {:else if maxconn === "Max-conn-reached" && !auth && connected}
     <div class="w-full h-[65vh] ">
       <div class="flex items-start">
         <div class="flex-shrink-0">
