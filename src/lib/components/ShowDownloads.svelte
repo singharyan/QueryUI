@@ -28,7 +28,7 @@
 
 </script>
 
-<div class="space-y-2 relative w-full h-[80vh]">
+<div class="space-y-2 relative w-full h-[65vh]">
     <p class="text-3xl font-bold mb-6">Past Results</p>
     <button class="absolute -top-2 right-0 bg-white opacity-80 rounded-[25%] p-1 " on:click={()=>{selected.set("")}}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
